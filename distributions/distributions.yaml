@@ -194,6 +194,23 @@ sources:
       binaries:
         - awstaghelper
 
+  backblaze:
+    description: Easy access to all of the capabilities of Backblaze B2 Cloud Storage.
+    url: https://github.com/Backblaze/B2_Command_Line_Tool
+    map:  
+      darwin: darwin
+      linux: linux
+      windows: windows
+    list:
+      type: github-releases
+      url: https://github.com/Backblaze/B2_Command_Line_Tool/releases
+    fetch:
+      url: https://github.com/Backblaze/B2_Command_Line_Tool/releases/download/{{ .Version }}/b2-{{ .Arch }}
+    install:
+      type: direct
+      binaries:
+        - b2
+
   bat:
     description: A cat(1) clone with wings.
     url: https://github.com/sharkdp/bat/
